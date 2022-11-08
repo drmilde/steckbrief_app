@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:steckbrief_app/screens/stack_screen.dart';
+
+import 'second_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({Key? key}) : super(key: key);
@@ -24,15 +27,26 @@ class StartScreen extends StatelessWidget {
                   child: Image.asset("assets/sheldon.jpg"),
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SecondScreen()),
+                  );
+                },
+                child: Text("Grüss Dich!"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StackScreen()),
+                  );
+                },
+                child: Text("Dich auch!"),
+              ),
               macheZeile(text: "Alter: 57"),
               macheZeile(text: "Augenfarbe: blau"),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
-              macheZeile(),
             ],
           ),
         ),
