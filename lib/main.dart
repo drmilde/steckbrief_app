@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:steckbrief_app/screens/second_screen.dart';
-import 'package:steckbrief_app/screens/start_screen.dart';
+import 'package:steckbrief_app/screens/ab_in_den_urlaub_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Steckbrief App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: StartScreen(),
+      home: AbInDenUrlaubScreen(),
     );
   }
 }
